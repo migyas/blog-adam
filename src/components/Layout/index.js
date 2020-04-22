@@ -1,17 +1,21 @@
 import React from "react"
 import PropTypes from "prop-types"
+import GlobalStyles from "../../styles/global"
 
-import MenuBar from "./MenuBar"
+import MenuBar from "../MenuBar"
+
+import * as S from "./styled"
 
 const Layout = ({ children }) => {
   return (
-    <>
+    <S.LayoutWrapper>
+      <GlobalStyles />
       <header>
-        <MenuBar/>
+        <MenuBar />
       </header>
-      <main>{children}</main>
+      <S.LayoutMain>{children}</S.LayoutMain>
       <footer></footer>
-    </>
+    </S.LayoutWrapper>
   )
 }
 
