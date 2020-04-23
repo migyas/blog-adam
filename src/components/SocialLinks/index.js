@@ -17,10 +17,11 @@ const SocialLinks = () => (
               href={link.url}
               title={link.label}
               target="_blank"
+              rel="noopener noreferrer"
             >
-            <S.IconWrapper>
-              <Icon />
-            </S.IconWrapper>
+              <S.IconWrapper>
+                <Icon />
+              </S.IconWrapper>
             </S.SocialLinksLink>
           </S.SocialLinksItem>
         )

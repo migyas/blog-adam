@@ -2,12 +2,12 @@ const links = [
 
   {
     label: "Linkedin",
-    url: "https://www.linkedin.com/adam"
+    url: "https://www.linkedin.com/in/adam-dias"
 
   },
   {
     label: "Github",
-    url: `https://github.com/migyas`,
+    url: `https://github.com/adamdias`,
   }
 ]
 

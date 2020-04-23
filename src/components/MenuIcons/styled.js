@@ -1,23 +1,23 @@
 import styled from "styled-components"
 
-export const SocialLinksWrapper = styled.nav`
+export const MenuIconsWrapper = styled.nav`
   margin: 2rem auto;
   width: 100%;
 `
 
-export const SocialLinksList = styled.ul`
+export const MenuIconsList = styled.ul`
   align-items: center;
   display: flex;
   list-style: none;
 `
 
-export const SocialLinksItem = styled.li`
+export const MenuIconsItem = styled.li`
   &:last-of-type {
-    margin-left: .4rem;
+    margin-left: 1rem;
   }
 `
 
-export const SocialLinksLink = styled.a`
+export const MenuIconsLink = styled.a`
   color: #fff;
   text-decoration: none;
   transition: color 0.5s;
