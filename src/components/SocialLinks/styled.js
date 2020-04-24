@@ -13,7 +13,7 @@ export const SocialLinksList = styled.ul`
 
 export const SocialLinksItem = styled.li`
   &:last-of-type {
-    margin-left: .4rem;
+    margin-left: .8rem;
   }
 `
 
@@ -29,6 +29,6 @@ export const SocialLinksLink = styled.a`
 
 export const IconWrapper = styled.div`
   fill: #fff;
-  width: 22px;
-  height: 22px;
+  width: 3rem;
+  height: 3rem;
 `

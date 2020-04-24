@@ -10,11 +10,8 @@ const Layout = ({ children }) => {
   return (
     <S.LayoutWrapper>
       <GlobalStyles />
-
       <MenuBar />
-
       <S.LayoutMain>{children}</S.LayoutMain>
-      <footer></footer>
     </S.LayoutWrapper>
   )
 }

@@ -29,6 +29,6 @@ export const MenuIconsLink = styled.a`
 
 export const IconWrapper = styled.div`
   fill: #fff;
-  width: 22px;
-  height: 22px;
+  width: 3rem;
+  height: 3rem;
 `
