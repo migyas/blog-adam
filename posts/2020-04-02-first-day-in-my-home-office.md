@@ -2,8 +2,8 @@
 date: 2020-04-02 05:54:23
 title: Two thing are infinite
 description: And I'm not sure about the universe.
-category: Misc
-background: "#7AAB13"
+category: React
+image: url(../src/components/images/photo-post.png)
 ---
 
 # Lorem ipsum

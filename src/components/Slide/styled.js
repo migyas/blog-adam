@@ -14,17 +14,26 @@ export const BackgroundImage = styled.header`
 `
 
 export const Title = styled.h1`
-  font-size: 4rem;
-  width: 70%;
-  margin-bottom: 5rem;
+  font-size: 3.6rem;
+  font-weight: 600;
+  letter-spacing: -0.225px;
+  line-height: 4.6rem;
+  padding-right: 40rem;
 `
 export const Info = styled.p`
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  line-height: 4.6rem;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
 `
 
 export const Description = styled.p`
   font-size: 1.875rem;
-  width: 70%;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 3.2rem;
   letter-spacing: 1px;
+  padding-right: 35rem;
+  margin-top: 3rem;
 `
