@@ -12,8 +12,8 @@ const GlobalStyles = createGlobalStyle`
   html {
     font-size: 62.5%;
   }
-
-  body {
+  
+    body {
     font-family: 'Open Sans', sans-serif;
     box-sizing: border-box;
   }

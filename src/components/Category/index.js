@@ -1,39 +1,53 @@
 import React from "react"
 import Grid from "../Grid"
-
-import Img from "gatsby-image"
-import { useStaticQuery, graphql } from "gatsby"
+import imgs1 from "../../../static/assets/img/card1.png"
+import imgs2 from "../../../static/assets/img/card2.png"
 
 import * as S from "./styled"
 
-const Category = () => {
-  const { cardImage } = useStaticQuery(graphql`
-    query {
-      cardImage: file(relativePath: { eq: "card1.png" }) {
-        childImageSharp {
-          fixed(width: 213, height: 241) {
-            ...GatsbyImageSharpFixed_tracedSVG
-          }
-        }
-      }
-    }
-  `)
-
-  return (
-    <Grid>
-      <S.CategoyWrapper>
+const Category = () => (
+  <Grid>
+    <S.CategoryWrapper>
+      <S.CategoryHeader>
         <S.CategoryTitle>Categorias</S.CategoryTitle>
-        <S.CategoryShowAll href="#">Ver todas as categorias</S.CategoryShowAll>
-      </S.CategoyWrapper>
+        <S.CategoryAllPost href="/">Ver todas as categorias</S.CategoryAllPost>
+      </S.CategoryHeader>
 
-      <S.CategoryList>
-        <S.CategoryLink>
-          <Img fixed={cardImage.childImageSharp.fixed} />
-          <S.CategoryItem>UI Design</S.CategoryItem>
-        </S.CategoryLink>
-      </S.CategoryList>
-    </Grid>
-  )
-}
+      <S.CategoryGroup>
+        <S.CategoryList>
+          <S.CategoryItem to="/">
+            <S.CategoryImage src={imgs1} alt="category card" />
+            <p>UI Design</p>
+          </S.CategoryItem>
+        </S.CategoryList>
+        <S.CategoryList>
+          <S.CategoryItem to="/">
+            <S.CategoryImage src={imgs2} alt="category card" />
+            <p>UX Design</p>
+          </S.CategoryItem>
+        </S.CategoryList>
+        <S.CategoryList>
+          <S.CategoryItem to="/">
+            <S.CategoryImage src={imgs2} alt="category card" />
+            <p>SEO</p>
+          </S.CategoryItem>
+        </S.CategoryList>
+        <S.CategoryList>
+          <S.CategoryItem to="/">
+            <S.CategoryImage src={imgs2} alt="category card" />
+            <p>Popular</p>
+          </S.CategoryItem>
+        </S.CategoryList>
+        <S.CategoryList>
+          <S.CategoryItem to="/">
+            <S.CategoryImage src={imgs2} alt="category card" />
+            <p>Essentials</p>
+          </S.CategoryItem>
+        </S.CategoryList>
+        <S.CategoryButton> > </S.CategoryButton>
+      </S.CategoryGroup>
+    </S.CategoryWrapper>
+  </Grid>
+)
 
 export default Category
