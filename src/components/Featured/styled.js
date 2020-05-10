@@ -5,7 +5,6 @@ export const FeaturedWrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  height: 100vh;
 `
 
 export const FeaturedHeader = styled.header`
@@ -85,6 +84,11 @@ export const FeaturedPosts = styled.div`
 
 export const FeaturedPost = styled(Link)`
   text-decoration: none;
+  transition: all .2s;
+
+  &:hover {
+    transform: scale(0.990);
+  }
 `
 
 export const FeaturedList = styled.ul`
@@ -104,6 +108,11 @@ export const FeaturedItem = styled(Link)`
 
   width: 28rem;
   height: 16.9rem;
+  transition: all .2s;
+
+  &:hover {
+    transform: scale(0.95);
+  }
 
   .title {
     font-size: 1.6rem;
@@ -122,49 +131,3 @@ export const FeaturedItem = styled(Link)`
     color: #111210;
   }
 `
-
-// //
-// export const FeaturedWrapper = styled.section`
-//   margin-top: 18.6rem;
-//   margin-bottom: 7.8rem;
-// `
-
-// //
-
-// export const FeaturedNav = styled.nav`
-//   display: flex;
-
-//   width: 100%;
-//   height: 35.8rem;
-// `
-// export const FeaturedUl = styled.ul`
-//   list-style: none;
-//   display: flex;
-// `
-
-// export const FeaturedList = styled.li`
-
-//   &:last-of-type {
-//     margin-right: 0;
-//   }
-// `
-
-// export const FeaturedItem = styled(Link)`
-//   width: 100%;
-//   text-decoration: none;
-//   transition: all .5s;
-
-//   &:hover {
-//     transform: scale(0.98)
-//   }
-// `
-// export const FeaturedDiv = styled.div`
-//   width: 100%;
-//   display: flex;
-//   flex-wrap: wrap;
-
-// `
-// export const FeaturedP = styled.div`
-//   width: 100%;
-//   padding: 2rem;
-// `

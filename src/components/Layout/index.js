@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import GlobalStyles from "../../styles/global"
 
 import MenuBar from "../MenuBar"
+import Footer from "../Footer"
 
 import * as S from "./styled"
 
@@ -12,6 +13,7 @@ const Layout = ({ children }) => {
       <GlobalStyles />
       <MenuBar />
       <S.LayoutMain>{children}</S.LayoutMain>
+      <Footer />
     </S.LayoutWrapper>
   )
 }

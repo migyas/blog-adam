@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const SocialLinksWrapper = styled.nav`
   margin: 2rem auto;
-  width: 100%;
+  width: auto;
 `
 
 export const SocialLinksList = styled.ul`
@@ -18,7 +18,7 @@ export const SocialLinksItem = styled.li`
 `
 
 export const SocialLinksLink = styled.a`
-  color: #fff;
+  ${({ color }) => color ? `color: ${color};` : 'color: #fff;'};
   text-decoration: none;
   transition: color 0.5s;
 

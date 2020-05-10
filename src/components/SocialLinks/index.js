@@ -5,7 +5,7 @@ import links from "./content"
 
 import * as S from "./styled"
 
-const SocialLinks = () => (
+const SocialLinks = ({ color }) => (
   <S.SocialLinksWrapper>
     <S.SocialLinksList>
       {links.map((link, i) => {
@@ -18,6 +18,7 @@ const SocialLinks = () => (
               title={link.label}
               target="_blank"
               rel="noopener noreferrer"
+              color={color}
             >
               <S.IconWrapper>
                 <Icon />

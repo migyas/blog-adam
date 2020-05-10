@@ -5,6 +5,7 @@ export const MenuBox = styled.div`
   top: 0;
   left: 0;  
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   justify-content: center;
 `
