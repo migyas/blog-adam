@@ -21,6 +21,7 @@ export const MostViewsHeader = styled.header`
 
 export const MostViewsGroup = styled.div`
   display: flex;
+
 `
 
 export const MostViewsItem = styled(Link)`

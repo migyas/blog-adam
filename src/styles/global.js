@@ -10,18 +10,14 @@ const GlobalStyles = createGlobalStyle`
   }
 
   html {
-    font-size: 62.5%;
+    font-size: 55%;
   }
   
-    body {
+  body {
     font-family: 'Open Sans', sans-serif;
     box-sizing: border-box;
   }
 
-  ::selection {
-    background-color: $color-primary;
-    color: $color-white;
-  }
 
   /* body.dark {
     --borders: #38444d;
