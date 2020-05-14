@@ -30,6 +30,7 @@ const IndexPage = () => (
       description="User research is the reality check every project needs. Here’s our guide to why you should be doing it — and how to get started."
     />
     <MostViews image={imageviews} category="RESOURCE" />
+
     <ViewsBlog
       title="Mind-Blowing Twitter Stats and Facts on Our Favorite Network (2018)"
       description="User research is the reality check every project needs. Here’s our guide to why you should be doing it — and how to get started."

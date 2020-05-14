@@ -7,7 +7,7 @@ import * as S from "./styled"
 
 const Category = () => (
   <Grid>
-    <S.CategoryWrapper>
+    <S.CategoryWrapper> 
       <S.CategoryHeader>
         <S.CategoryTitle>Categorias</S.CategoryTitle>
         <S.CategoryAllPost href="/">Ver todas as categorias</S.CategoryAllPost>
@@ -44,7 +44,7 @@ const Category = () => (
             <p>Essentials</p>
           </S.CategoryItem>
         </S.CategoryList>
-        <S.CategoryButton> > </S.CategoryButton>
+        <S.CategoryButton title="Mostrar mais categorias" > > </S.CategoryButton>
       </S.CategoryGroup>
     </S.CategoryWrapper>
   </Grid>

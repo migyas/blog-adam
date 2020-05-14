@@ -12,16 +12,14 @@ const Featured = ({ image, title, description, category }) => (
       </S.FeaturedHeader>
 
       <S.FeaturedPosts>
-        <S.FeaturedPost to="/">
-          <S.FeaturedBackground image={image}>
-            <S.FeaturedInfo>
-              BY &nbsp;&nbsp;&nbsp;ADAM DIAS
-              &nbsp;&nbsp;&nbsp;IN&nbsp;&nbsp;&nbsp; {category}
-            </S.FeaturedInfo>
-            <S.FeaturedTitlePost>{title}</S.FeaturedTitlePost>
-            <S.FeaturedDescription>{description}</S.FeaturedDescription>
-          </S.FeaturedBackground>
-        </S.FeaturedPost>
+        <S.FeaturedBackground image={image}>
+          <S.FeaturedInfo>
+            BY &nbsp;&nbsp;&nbsp;ADAM DIAS
+            &nbsp;&nbsp;&nbsp;IN&nbsp;&nbsp;&nbsp; {category}
+          </S.FeaturedInfo>
+          <S.FeaturedTitlePost>{title}</S.FeaturedTitlePost>
+          <S.FeaturedDescription>{description}</S.FeaturedDescription>
+        </S.FeaturedBackground>
 
         <S.FeaturedList>
           <S.FeaturedItem to="/">

@@ -1,16 +1,21 @@
 import styled from "styled-components"
+import media from "styled-media-query"
 import { Link } from "gatsby"
 
 export const FeaturedWrapper = styled.section`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  margin-bottom: 7rem;
+
+  ${media.lessThan("small")`
+    margin-top: 10rem;
+  `}
 `
 
 export const FeaturedHeader = styled.header`
   display: flex;
-  width: 100%;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 2.6rem;
 `
 
@@ -24,7 +29,6 @@ export const FeaturedTitle = styled.h1`
 
 export const FeaturedAllPost = styled(Link)`
   font-size: 1.6rem;
-  line-height: 4.6rem;
   text-decoration: none;
   color: #9b9b9b;
   transition: color 0.5s;
@@ -33,23 +37,53 @@ export const FeaturedAllPost = styled(Link)`
     color: #696868;
   }
 `
+//
 
-export const FeaturedBackground = styled.div`
+export const FeaturedPosts = styled.div`
+  display: flex;
+  justify-content: space-between;
+
+  ${media.lessThan("medium")`
+    flex-direction: column;
+    justify-content: flex-start;
+  `}
+`
+
+export const FeaturedBackground = styled(Link)`
   ${({ image }) =>
     image &&
     `background-image: linear-gradient(to top left,rgba(27, 0, 66, 0.9), rgba(27, 0, 66, 0.8)), url(${image});`}
   background-size: cover;
-  background-position: top;
-  width: 58rem;
-  height: 35.8rem;
+  background-position: bottom right;
+  padding: 4rem;
+  min-height: 35.8rem;
   border-radius: 8px;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.0835598);
   color: #fff;
+  text-decoration: none;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 0 4rem;
+
+  flex: 0 1 573px;
+
+  transition: all 0.2s;
+
+  &:hover {
+    transform: scale(0.95);
+  }
+
+  ${media.lessThan("medium")`
+    margin-left: 0;
+    flex: 1 1 100%;
+    padding: 2rem;
+  `}
+
+  ${media.lessThan("small")`
+    padding: 3rem;
+  `}
 `
 export const FeaturedInfo = styled.p`
   font-size: 1.6rem;
@@ -74,42 +108,39 @@ export const FeaturedDescription = styled.p`
   font-size: 1.6rem;
   font-weight: normal;
   line-height: 3.2rem;
-  margin: 2.5rem 0;
+  margin-bottom: 2.5rem;
 `
 //
-
-export const FeaturedPosts = styled.div`
-  display: flex;
-`
-
-export const FeaturedPost = styled(Link)`
-  text-decoration: none;
-  transition: all .2s;
-
-  &:hover {
-    transform: scale(0.990);
-  }
-`
 
 export const FeaturedList = styled.ul`
   display: flex;
   flex-wrap: wrap;
-
+  flex: 1 1 50%;
   list-style: none;
+  align-content: space-between;
+
+  ${media.lessThan("medium")`
+    margin-top: 2.1rem;
+    justify-content: flex-start;
+  `}
 `
 
 export const FeaturedItem = styled(Link)`
   background: #ffffff;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.0835598);
   border-radius: 8px;
-  padding: 2rem;
-  margin: 0 0 1.7rem 1.5rem;
+  padding: 3.2rem 2rem;
+  margin-left: 2.1rem;
+
   text-decoration: none;
 
-  width: 28rem;
-  height: 16.9rem;
-  transition: all .2s;
+  flex: 1 1 40%;
 
+  transition: all 0.2s;
+
+  &:not(:last-of-type) {
+    margin-bottom: 0;
+  }
   &:hover {
     transform: scale(0.95);
   }
@@ -130,4 +161,16 @@ export const FeaturedItem = styled(Link)`
 
     color: #111210;
   }
+
+  ${media.lessThan("995px")`
+    flex: 1 1 50%;
+
+    &:not(:last-of-type) {
+    margin-bottom: 2.1rem !important;
+    }
+  `}
+  ${media.lessThan("medium")`
+    margin-left: 0;
+    flex: 1 1 100%;
+  `}
 `

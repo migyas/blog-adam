@@ -1,9 +1,9 @@
-import { Menu } from "@styled-icons/material-outlined/Menu"
+// import { Menu } from "@styled-icons/material-outlined/Menu"
 import { Search } from "@styled-icons/feather/Search"
 
 
 const Icons = {
-  Menu,
+  // Menu,
   Search,
 }
 

@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import media from "styled-media-query"
 
 export const BackgroundImage = styled.header`
   ${({ image }) =>
@@ -6,7 +7,6 @@ export const BackgroundImage = styled.header`
     `background-image: linear-gradient(to top left,rgba(27, 0, 66, 0.9), rgba(27, 0, 66, 0.8)), url(${image});`}
   background-size: cover;
   background-position: top;
-  width: 100%;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -19,6 +19,15 @@ export const Title = styled.h1`
   letter-spacing: -0.225px;
   line-height: 4.6rem;
   padding-right: 40rem;
+
+  ${media.lessThan("864px")`
+    padding-right: 20rem;
+  `}
+
+  ${media.lessThan("medium")`
+    padding-right: 0;
+    font-size: 4rem;
+  `}
 `
 export const Info = styled.p`
   font-size: 1.6rem;
@@ -36,4 +45,14 @@ export const Description = styled.p`
   letter-spacing: 1px;
   padding-right: 35rem;
   margin-top: 3rem;
+
+  ${media.lessThan("864px")`
+    font-size: 2.3rem;
+    padding-right: 10rem;
+  `}
+
+  ${media.lessThan("small")`
+    padding-right: 0;
+    font-size: 1.6rem;
+  `}
 `

@@ -1,5 +1,4 @@
-import styled from 'styled-components'
-
+import styled from "styled-components"
 
 export const LayoutWrapper = styled.section`
   display: flex;
@@ -7,7 +6,7 @@ export const LayoutWrapper = styled.section`
 `
 
 export const LayoutMain = styled.main`
-  background: #F9F9FB;
+  background: #f9f9fb;
   min-height: 100vh;
   width: 100%;
 `

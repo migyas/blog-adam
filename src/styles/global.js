@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components"
+import media from "styled-media-query"
 
 const GlobalStyles = createGlobalStyle`
   *,
@@ -11,6 +12,10 @@ const GlobalStyles = createGlobalStyle`
 
   html {
     font-size: 55%;
+
+    ${media.lessThan('864px')`
+      font-size: 60%;
+    `}
   }
   
   body {
@@ -18,6 +23,11 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  img {
+    display: block;
+  	width: 100%;
+  	height: auto;
+  }
 
   /* body.dark {
     --borders: #38444d;

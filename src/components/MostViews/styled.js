@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
+import media from "styled-media-query"
 
 export const MostViewsWrapper = styled.section`
   display: flex;
@@ -7,8 +8,16 @@ export const MostViewsWrapper = styled.section`
   margin-bottom: 7.8rem;
 `
 
+export const MostViewsGroup = styled.div`
+  display: flex;
+
+  ${media.lessThan("medium")`
+    flex-direction: column;
+  `}
+`
+
 export const MostViewsHeader = styled.header`
-  margin-top: 7rem;
+  margin-bottom: 2.6rem;
 
   h1 {
     font-size: 3.6rem;
@@ -19,28 +28,17 @@ export const MostViewsHeader = styled.header`
   }
 `
 
-export const MostViewsGroup = styled.div`
-  display: flex;
-
-`
-
 export const MostViewsItem = styled(Link)`
   text-decoration: none;
   font-weight: normal;
-  margin-top: 2.6rem;
-  transition: all .2s;
+  transition: all 0.2s;
 
   &:hover {
-    transform: scale(1.020);
+    transform: scale(1.02);
   }
 
   &:first-of-type {
     margin-right: 2.3rem;
-  }
-
-  img {
-    width: 57.39rem;
-    height: 35.8rem;
   }
 
   p {
@@ -69,4 +67,15 @@ export const MostViewsItem = styled(Link)`
 
     color: #111210;
   }
+
+  ${media.lessThan("medium")`
+
+    &:not(:last-of-type){
+    padding: 1rem 0;
+    margin-bottom: 7rem;
+
+    border-bottom: 1px solid rgba(0,0,0, .2);
+    }
+
+  `}
 `

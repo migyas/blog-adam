@@ -25,7 +25,7 @@ const MostViewsBlog = ({ title, description, category }) => (
             <h2>{title}</h2>
             <p>{description}</p>
           </S.ViewsBlogDetail>
-          <img src={views1} alt="views post" title="views post1" />
+          <S.ViewsBlogImg src={views1} alt="views post" title="views post1" />
         </S.ViewsBlogItem>
 
         <S.ViewsBlogItem to="/">
@@ -38,7 +38,7 @@ const MostViewsBlog = ({ title, description, category }) => (
             <h2>{title}</h2>
             <p>{description}</p>
           </S.ViewsBlogDetail>
-          <img src={views2} alt="views post" title="views post2" />
+          <S.ViewsBlogImg src={views2} alt="views post" title="views post2" />
         </S.ViewsBlogItem>
 
         <S.ViewsBlogItem to="/">
@@ -51,7 +51,7 @@ const MostViewsBlog = ({ title, description, category }) => (
             <h2>{title}</h2>
             <p>{description}</p>
           </S.ViewsBlogDetail>
-          <img src={views3} alt="views post" title="views post3" />
+          <S.ViewsBlogImg src={views3} alt="views post" title="views post3" />
         </S.ViewsBlogItem>
       </S.ViewsBlogGroup>
     </S.ViewsBlogWrapper>

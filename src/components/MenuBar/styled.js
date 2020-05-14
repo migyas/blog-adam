@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import media from "styled-media-query"
 
 export const MenuBox = styled.div`
   position: fixed;
@@ -7,6 +8,10 @@ export const MenuBox = styled.div`
   display: flex;
   width: 100%;
   justify-content: center;
+
+  ${media.lessThan("large")`
+    padding: 0 3rem;
+  `}
 `
 
 export const MenuBarWrapper = styled.div`
