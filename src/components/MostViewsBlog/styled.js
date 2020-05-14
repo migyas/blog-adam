@@ -30,9 +30,13 @@ export const ViewsBlogItem = styled(Link)`
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.0835598);
   border-radius: 8px;
   display: flex;
-  flex: 1 1;
 
+  flex: 1 1;
   margin-bottom: 2.8rem;
+
+  ${media.lessThan("medium")`
+    flex-direction: column;
+  `}
 `
 
 export const ViewsBlogImg = styled.img`
@@ -43,7 +47,8 @@ export const ViewsBlogImg = styled.img`
   `}
 
   ${media.lessThan("medium")`
-    display: none;
+    order: 0;
+    width: 100%;
   `}
 `
 
@@ -54,6 +59,8 @@ export const ViewsBlogDetail = styled.div`
   padding-right: 2rem;
   margin-left: 5rem;
 
+
+  
   flex: 1 1 60%;
 
   p {
@@ -99,11 +106,13 @@ export const ViewsBlogDetail = styled.div`
   `}
 
   ${media.lessThan("865px")`
-    padding: 0 1rem!important;
-  `}
-
-  ${media.lessThan("865px")`
     padding: 0 !important;
     margin-left: 2rem;
   `}
+
+  ${media.lessThan("medium")`
+    order: 1;
+    
+  `}
+
 `
