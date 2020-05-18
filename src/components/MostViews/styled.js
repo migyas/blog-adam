@@ -6,6 +6,11 @@ export const MostViewsWrapper = styled.section`
   display: flex;
   flex-direction: column;
   margin-bottom: 7.8rem;
+
+  ${media.lessThan("medium")`
+    margin-bottom: 3.5rem;
+
+  `}
 `
 
 export const MostViewsGroup = styled.div`
@@ -34,11 +39,11 @@ export const MostViewsItem = styled(Link)`
   transition: all 0.2s;
 
   &:hover {
-    transform: scale(1.02);
+    transform: scale(0.95);
   }
 
-  &:first-of-type {
-    margin-right: 2.3rem;
+  &:not(:last-child) {
+    padding-right: 2.3rem;
   }
 
   p {
@@ -72,9 +77,7 @@ export const MostViewsItem = styled(Link)`
 
     &:not(:last-of-type){
     padding: 1rem 0;
-    margin-bottom: 7rem;
-
-    border-bottom: 1px solid rgba(0,0,0, .2);
+    margin-bottom: 3.5rem;
     }
 
   `}

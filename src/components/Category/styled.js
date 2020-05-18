@@ -8,7 +8,15 @@ export const CategoryWrapper = styled.nav`
   margin-top: 18.6rem;
   margin-bottom: 8.6rem;
 
+  ${media.lessThan("medium")`
+    margin-top: 10rem;
+  `}
+
   ${media.lessThan("small")`
+    margin-top: 5rem;
+  `}
+
+  ${media.lessThan("360px")`
     display: none;
   `}
 `
@@ -39,6 +47,7 @@ export const CategoryAllPost = styled(Link)`
 
   ${media.lessThan("849px")`
     font-size: 2rem;
+    margin-left: 1.5rem;
   `}
 
   &:hover {
@@ -49,21 +58,46 @@ export const CategoryAllPost = styled(Link)`
 export const CategoryGroup = styled.ul`
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
 `
 
 export const CategoryList = styled.li`
-  margin-right: 2.1rem;
-  width: 19.7rem;
+  transition: all 0.5s;
+
+  flex: 1 0 20%;
+
+  &:hover {
+    transform: scale(0.95);
+    border-radius: 8px;
+    box-shadow: 2px 0px 8px rgba(0, 0, 0, 0.0835598);
+  }
+
+  ${media.lessThan("950px")`
+    &:nth-child(5) {
+      display: none;
+    }
+  `}
+
+  ${media.lessThan("790px")`
+    &:nth-child(4) {
+      display: none;
+    }
+  `}
+
+  ${media.lessThan("790px")`
+    &:nth-child(3) {
+      display: none;
+    }
+  `}
 `
 
 export const CategoryItem = styled(Link)`
   text-align: center;
-  transition: color 0.5s;
   text-decoration: none;
   color: #111210;
   font-size: 2.4rem;
   font-weight: 600;
-  transition: color 0.4s;
+  transition: all 0.4s;
 
   ${media.lessThan("849px")`
     font-size: 2rem;
@@ -83,26 +117,22 @@ export const CategoryImage = styled.img`
   margin-bottom: 2.2rem;
   border-radius: 3px;
   min-height: 9.7rem;
-
-  &:hover {
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.0835598);
-  }
 `
 
-export const CategoryButton = styled.button`
-  width: 8rem;
-  min-height: 10rem;
-  border: none;
-  cursor: pointer;
-  font-size: 3.2rem;
+// export const CategoryButton = styled.button`
+//   width: 8rem;
+//   min-height: 10rem;
+//   border: none;
+//   cursor: pointer;
+//   font-size: 3.2rem;
 
-  background: #ffffff;
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.0835598);
-  border-radius: 8px;
-  transform: all 1s;
+//   background: #ffffff;
+//   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.0835598);
+//   border-radius: 8px;
+//   transform: all 1s;
 
-  &.active,
-  &:hover {
-    transform: scaleY(0.99);
-  }
-`
+//   &.active,
+//   &:hover {
+//     transform: scaleY(0.99);
+//   }
+// `

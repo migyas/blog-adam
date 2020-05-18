@@ -1,14 +1,8 @@
 const links2 = [
-
-  // {
-  //   label: "Menu",
-  //   url: "#"
-
-  // },
   {
     label: "Search",
-    url: `#`,
-  }
+    url: `../search`,
+  },
 ]
 
 export default links2

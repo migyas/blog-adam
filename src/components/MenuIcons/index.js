@@ -2,6 +2,7 @@ import React from "react"
 
 import Icons from "./Icons"
 import links2 from "./content"
+import Logo from "../Logo"
 
 import * as S from "./styled"
 
@@ -29,24 +30,27 @@ const MenuIcons = () => (
 
                   <nav className="nav">
                     <ul className="list">
+                      <Logo
+                        to="navi-toogle"
+                      />
                       <li className="item">
                         <a href="/" className="link" title="Home">
-                          <span>&diams;</span>Home
+                          Home
                         </a>
                       </li>
                       <li className="item">
                         <a href="/posts" className="link" title="Sobre">
-                          <span>&hearts;</span>Sobre Mim
+                          Sobre Mim
                         </a>
                       </li>
                       <li className="item">
-                        <a href="/category" className="link" title="Posts">
-                          <span>&spades;</span>Posts
+                        <a href="/posts" className="link" title="Artigos">
+                          Posts
                         </a>
                       </li>
                       <li className="item">
                         <a href="/category" className="link" title="Categorias">
-                          <span>&clubs;</span>Categorias
+                          Categorias
                         </a>
                       </li>
                     </ul>

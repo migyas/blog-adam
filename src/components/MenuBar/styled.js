@@ -8,6 +8,12 @@ export const MenuBox = styled.div`
   display: flex;
   width: 100%;
   justify-content: center;
+  background-image: linear-gradient(
+    rgba(75, 0, 130, 0.4),
+    transparent 80%,
+    transparent 100%
+  );
+  z-index: 9999;
 
   ${media.lessThan("large")`
     padding: 0 3rem;
@@ -26,4 +32,10 @@ export const MenuBarWrapper = styled.div`
   height: 15rem;
 `
 
-export const MenuBarGroup = styled.div``
+export const MenuBarGroup = styled.div`
+  ${media.lessThan("400px")`
+    &:first-of-type {
+      display: none;
+    }
+  `}
+`

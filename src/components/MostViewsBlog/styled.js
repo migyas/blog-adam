@@ -6,6 +6,10 @@ export const ViewsBlogWrapper = styled.section`
   display: flex;
   flex-direction: column;
   margin-bottom: 18.4rem;
+
+  ${media.lessThan("medium")`
+    margin-bottom: 3.5rem;
+  `}
 `
 
 export const ViewsBlogHeader = styled.header`
@@ -30,9 +34,14 @@ export const ViewsBlogItem = styled(Link)`
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.0835598);
   border-radius: 8px;
   display: flex;
+  transition: all 0.2s;
 
   flex: 1 1;
   margin-bottom: 2.8rem;
+
+  &:hover {
+    transform: scale(0.98);
+  }
 
   ${media.lessThan("medium")`
     flex-direction: column;
@@ -59,8 +68,6 @@ export const ViewsBlogDetail = styled.div`
   padding-right: 2rem;
   margin-left: 5rem;
 
-
-  
   flex: 1 1 60%;
 
   p {
@@ -75,6 +82,11 @@ export const ViewsBlogDetail = styled.div`
       padding-left: 1rem;
       margin-top: 4.2rem;
       margin-bottom: 2rem;
+
+      ${media.lessThan("390px")`
+        font-size: 1.2rem;
+        margin-right: .5rem;
+      `}
     }
 
     &:last-of-type {
@@ -101,18 +113,12 @@ export const ViewsBlogDetail = styled.div`
     color: #111210;
   }
 
-  ${media.lessThan("980px")`
-    padding: 0!important;
-  `}
-
   ${media.lessThan("865px")`
-    padding: 0 !important;
+    padding: 0 ;
     margin-left: 2rem;
   `}
 
   ${media.lessThan("medium")`
     order: 1;
-    
   `}
-
 `

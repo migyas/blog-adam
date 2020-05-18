@@ -1,7 +1,8 @@
 import styled from "styled-components"
 import media from "styled-media-query"
+import { Link } from "gatsby"
 
-export const BackgroundImage = styled.header`
+export const BackgroundImage = styled(Link)`
   ${({ image }) =>
     image &&
     `background-image: linear-gradient(to top left,rgba(27, 0, 66, 0.9), rgba(27, 0, 66, 0.8)), url(${image});`}
@@ -11,6 +12,7 @@ export const BackgroundImage = styled.header`
   display: flex;
   align-items: center;
   color: #fff;
+  text-decoration: none;
 `
 
 export const Title = styled.h1`

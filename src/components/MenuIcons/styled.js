@@ -1,38 +1,40 @@
 import styled from "styled-components"
 import media from "styled-media-query"
 
+// ICON MENU
+
 export const LayoutNavigation = styled.div`
   display: flex;
+  position: relative;
   .checkbox {
     display: none;
   }
 
   .button {
-    /* position: fixed; */
     display: flex;
-    top: 6.7rem;
-    right: 32.4rem;
     z-index: 2000;
     cursor: pointer;
     text-align: center;
+    position: absolute;
 
-    height: 3rem;
+    top: -2.5rem;
+    right: 4rem;
+
+    height: 2.5rem;
     width: 3rem;
   }
 
   .background {
-    height: 3rem;
-    width: 3rem;
+    height: 5rem;
+    width: 5rem;
     position: fixed;
-    top: 7.5rem;
-    right: 34rem;
-
     border-radius: 50%;
-    background-image: radial-gradient(rgba(0, 111, 111, 1), black);
+    background-image: linear-gradient(
+      rgba(128, 174, 224, 1),
+      rgba(0, 57, 117, 1)
+    );
     z-index: 1000;
-
     opacity: 0;
-    /* transform: scale(120); */
     transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
   }
 
@@ -109,14 +111,14 @@ export const LayoutNavigation = styled.div`
   /* ICON */
   .icon {
     position: relative;
-    top: -1.7rem;
-    right: 4rem;
+    top: 1rem;
+    right: -0.2rem;
 
     &,
     &::before,
     &::after {
-      width: 2rem;
-      height: .45rem;
+      width: 2.5rem;
+      height: 0.2rem;
       background-color: #fff;
       display: inline-block;
     }
@@ -150,15 +152,20 @@ export const LayoutNavigation = styled.div`
   }
 
   .checkbox:checked + .button .icon::before {
+    position: absolute;
+    z-index: 3000;
     top: 0;
     transform: rotate(135deg);
   }
 
   .checkbox:checked + .button .icon::after {
+    position: absolute;
+    z-index: 3000;
     top: 0;
     transform: rotate(-135deg);
   }
 `
+// ICON SEARCH
 
 export const MenuIconsWrapper = styled.nav`
   margin: 2rem auto;
@@ -183,11 +190,11 @@ export const MenuIconsItem = styled.li`
 export const MenuIconsLink = styled.a`
   color: #fff;
   text-decoration: none;
-  transition: color 0.5s;
+  transition: all .5s;
 
-  /* &:hover {
+  svg:hover {
     color: #ff5480;
-  } */
+  }
 `
 
 export const IconWrapper = styled.div`

@@ -7,8 +7,9 @@ export const FeaturedWrapper = styled.section`
   flex-direction: column;
   margin-bottom: 7rem;
 
-  ${media.lessThan("small")`
-    margin-top: 10rem;
+  ${media.lessThan("525px")`
+    margin-top: 5rem;
+    margin-bottom: 3.5rem;
   `}
 `
 
