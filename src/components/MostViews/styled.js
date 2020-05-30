@@ -9,7 +9,6 @@ export const MostViewsWrapper = styled.section`
 
   ${media.lessThan("medium")`
     margin-bottom: 3.5rem;
-
   `}
 `
 
@@ -28,8 +27,11 @@ export const MostViewsHeader = styled.header`
     font-size: 3.6rem;
     line-height: 4.6rem;
     letter-spacing: -0.225px;
-
     color: #111210;
+
+    ${media.lessThan("525px")`
+      font-size: 2.5rem;
+    `}
   }
 `
 
@@ -67,18 +69,14 @@ export const MostViewsItem = styled(Link)`
     font-size: 2.8rem;
     line-height: 4rem;
     padding-right: 1rem;
-
     letter-spacing: -0.175px;
-
     color: #111210;
   }
 
   ${media.lessThan("medium")`
-
     &:not(:last-of-type){
     padding: 1rem 0;
     margin-bottom: 3.5rem;
     }
-
   `}
 `

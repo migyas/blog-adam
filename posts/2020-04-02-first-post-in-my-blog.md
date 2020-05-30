@@ -1,10 +1,9 @@
 ---
-date: 2020-04-02 05:54:23
-title: Sobre mim
+date: 2020-04-10 05:50:23
+title: First post in my blog
 description: So say goodbye to love and hold your head up high
-category: CSS 3
-image: url(../src/components/images/photo-post.png)
-
+tag: destaque
+category: CSS3
 ---
 
 Proin suscipit luctus orci placerat fringilla. Donec hendrerit laoreet risus eget adipiscing. Suspendisse in urna ligula, a volutpat mauris. Sed enim mi, [bibendum](http://google.com) eu pulvinar vel, sodales vitae dui.

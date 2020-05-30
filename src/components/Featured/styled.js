@@ -12,6 +12,7 @@ export const FeaturedWrapper = styled.section`
     margin-bottom: 3.5rem;
   `}
 `
+// HEADER - EM DESTAQUE
 
 export const FeaturedHeader = styled.header`
   display: flex;
@@ -26,6 +27,10 @@ export const FeaturedTitle = styled.h1`
   line-height: 4.6rem;
   letter-spacing: -0.225px;
   color: #111210;
+
+  ${media.lessThan("525px")`
+    font-size: 2.5rem;
+  `}
 `
 
 export const FeaturedAllPost = styled(Link)`
@@ -38,7 +43,7 @@ export const FeaturedAllPost = styled(Link)`
     color: #696868;
   }
 `
-//
+// ITEMS EM DESTAQUE
 
 export const FeaturedPosts = styled.div`
   display: flex;
@@ -49,6 +54,8 @@ export const FeaturedPosts = styled.div`
     justify-content: flex-start;
   `}
 `
+
+// ITEM DESTAQUE COM IMAGEM
 
 export const FeaturedBackground = styled(Link)`
   ${({ image }) =>
@@ -62,15 +69,13 @@ export const FeaturedBackground = styled(Link)`
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.0835598);
   color: #fff;
   text-decoration: none;
+  transition: all 0.2s;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-
   flex: 0 1 573px;
-
-  transition: all 0.2s;
 
   &:hover {
     transform: scale(0.95);
@@ -111,7 +116,7 @@ export const FeaturedDescription = styled.p`
   line-height: 3.2rem;
   margin-bottom: 2.5rem;
 `
-//
+// ITEMS SEM IMAGENS
 
 export const FeaturedList = styled.ul`
   display: flex;
@@ -132,12 +137,10 @@ export const FeaturedItem = styled(Link)`
   border-radius: 8px;
   padding: 3.2rem 2rem;
   margin-left: 2.1rem;
-
   text-decoration: none;
+  transition: all 0.2s;
 
   flex: 1 1 40%;
-
-  transition: all 0.2s;
 
   &:not(:last-of-type) {
     margin-bottom: 0;
@@ -145,6 +148,18 @@ export const FeaturedItem = styled(Link)`
   &:hover {
     transform: scale(0.95);
   }
+
+  ${media.lessThan("995px")`
+    flex: 1 1 50%;
+
+    &:not(:last-of-type) {
+    margin-bottom: 2.1rem !important;
+    }
+  `}
+  ${media.lessThan("medium")`
+    margin-left: 0;
+    flex: 1 1 100%;
+  `}
 
   .title {
     font-size: 1.6rem;
@@ -159,19 +174,6 @@ export const FeaturedItem = styled(Link)`
     font-size: 1.8rem;
     line-height: 3rem;
     letter-spacing: -0.1125px;
-
     color: #111210;
   }
-
-  ${media.lessThan("995px")`
-    flex: 1 1 50%;
-
-    &:not(:last-of-type) {
-    margin-bottom: 2.1rem !important;
-    }
-  `}
-  ${media.lessThan("medium")`
-    margin-left: 0;
-    flex: 1 1 100%;
-  `}
 `

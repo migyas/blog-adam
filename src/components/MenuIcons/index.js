@@ -18,6 +18,7 @@ const MenuIcons = () => (
               <S.IconWrapper>
                 <Icon />
                 <S.LayoutNavigation>
+                  {/* MENU LIST  */}
                   <input
                     type="checkbox"
                     className="checkbox"
@@ -30,9 +31,7 @@ const MenuIcons = () => (
 
                   <nav className="nav">
                     <ul className="list">
-                      <Logo
-                        to="navi-toogle"
-                      />
+                      <Logo />
                       <li className="item">
                         <a href="/" className="link" title="Home">
                           Home

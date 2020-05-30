@@ -20,6 +20,7 @@ export const CategoryWrapper = styled.nav`
     display: none;
   `}
 `
+// HEADER - CATEGORIA
 
 export const CategoryHeader = styled.header`
   display: flex;
@@ -37,6 +38,10 @@ export const CategoryTitle = styled.h1`
   ${media.lessThan("849px")`
     font-size: 3.2rem;
   `}
+
+  ${media.lessThan("small")`
+    font-size: 2.5rem;
+  `}
 `
 
 export const CategoryAllPost = styled(Link)`
@@ -46,14 +51,18 @@ export const CategoryAllPost = styled(Link)`
   transition: color 0.5s;
 
   ${media.lessThan("849px")`
-    font-size: 2rem;
     margin-left: 1.5rem;
+  `}
+
+  ${media.lessThan("small")`
+    font-size: 1.6rem;
   `}
 
   &:hover {
     color: #696868;
   }
 `
+// LISTA DE CATEGORIAS
 
 export const CategoryGroup = styled.ul`
   list-style: none;
@@ -63,7 +72,6 @@ export const CategoryGroup = styled.ul`
 
 export const CategoryList = styled.li`
   transition: all 0.5s;
-
   flex: 1 0 20%;
 
   &:hover {
@@ -118,6 +126,7 @@ export const CategoryImage = styled.img`
   border-radius: 3px;
   min-height: 9.7rem;
 `
+// BOTÃO PARA MOSTRAR MAIS
 
 // export const CategoryButton = styled.button`
 //   width: 8rem;

@@ -1,9 +1,10 @@
 ---
 date: 2020-04-02 05:54:23
-title: Two thing are infinite
+title: First day in my home office
 description: And I'm not sure about the universe.
 category: React
-image: url(../src/components/images/photo-post.png)
+image: assets/img/card1.png
+tag: destaque
 ---
 
 # Lorem ipsum

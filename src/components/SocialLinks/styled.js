@@ -42,7 +42,7 @@ export const IconWrapper = styled.div`
   height: 3rem;
 
   ${media.lessThan("large")`
-    width: 4rem;
-    height: 4rem;
+    width: 3.5rem;
+    height: 3.5rem;
   `}
 `

@@ -9,10 +9,11 @@ export const BackgroundImage = styled(Link)`
   background-size: cover;
   background-position: top;
   height: 100vh;
-  display: flex;
-  align-items: center;
   color: #fff;
   text-decoration: none;
+
+  display: flex;
+  align-items: center;
 `
 
 export const Title = styled.h1`
@@ -35,6 +36,7 @@ export const Info = styled.p`
   font-size: 1.6rem;
   line-height: 4.6rem;
   text-transform: uppercase;
+  
   display: flex;
   align-items: center;
 `
