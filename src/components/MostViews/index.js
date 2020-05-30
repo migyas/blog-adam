@@ -1,44 +1,72 @@
 import React from "react"
 import Grid from "../Grid"
+import { useStaticQuery, graphql } from "gatsby"
 
 import * as S from "./styled"
 
-const MostViews = ({ image, category }) => (
-  <Grid>
-    <S.MostViewsWrapper>
-      <S.MostViewsHeader>
-        <h1>Mais vistos do mês</h1>
-      </S.MostViewsHeader>
+const MostViews = () => {
+  const {
+    allMarkdownRemark: { edges: allMostViews },
+  } = useStaticQuery(graphql`
+    query MostViews {
+      allMarkdownRemark(
+        sort: { order: DESC, fields: frontmatter___date }
+        limit: 2
+      ) {
+        edges {
+          node {
+            frontmatter {
+              category
+              title
+              description
+              image
+            }
+            fields {
+              slug
+            }
+          }
+        }
+      }
+    }
+  `)
 
-      <S.MostViewsGroup>
-        <S.MostViewsItem to="/">
-          <img src={image} alt="posts most views" title="Most Views Post" />
-          <p>
-            BY &nbsp;&nbsp;<strong>ADAM DIAS</strong> &nbsp;&nbsp;IN&nbsp;&nbsp;
-            <strong>{category}</strong>
-          </p>
-          <h2>Website Downtime: Applicable Tips on How to Prevent It</h2>
-          <p>
-            User research is the reality check every project needs. Here’s our
-            guide to why you should be doing it — and how to get started.
-          </p>
-        </S.MostViewsItem>
+  if (!allMostViews.length) {
+    return false
+  }
 
-        <S.MostViewsItem href="/">
-          <img src={image} alt="posts most views" title="Most Views Post" />
-          <p>
-            BY &nbsp;&nbsp;<strong>ADAM DIAS</strong> &nbsp;&nbsp;IN&nbsp;&nbsp;
-            <strong>{category}</strong>
-          </p>
-          <h2>How to Fix Error 404 Not Found on Your WordPress Site</h2>
-          <p>
-            User research is the reality check every project needs. Here’s our
-            guide to why you should be doing it — and how to get started.
-          </p>
-        </S.MostViewsItem>
-      </S.MostViewsGroup>
-    </S.MostViewsWrapper>
-  </Grid>
-)
+  return (
+    <Grid>
+      <S.MostViewsWrapper>
+        <S.MostViewsHeader>
+          <h1>Mais vistos do mês</h1>
+        </S.MostViewsHeader>
+
+        <S.MostViewsGroup>
+          {allMostViews.map(({ node: item }, index) => {
+            if (index !== -3) {
+              return (
+                <S.MostViewsItem to={item.fields.slug}>
+                  <img
+                    src={item.frontmatter.image}
+                    alt="posts most views"
+                    title="Most Views Post"
+                  />
+                  <p>
+                    BY &nbsp;&nbsp;<strong>ADAM DIAS</strong>{" "}
+                    &nbsp;&nbsp;IN&nbsp;&nbsp;
+                    <strong>{item.frontmatter.category}</strong>
+                  </p>
+                  <h2>{item.frontmatter.title}</h2>
+                  <p>{item.frontmatter.description}</p>
+                </S.MostViewsItem>
+              )
+            }
+            return false
+          })}
+        </S.MostViewsGroup>
+      </S.MostViewsWrapper>
+    </Grid>
+  )
+}
 
 export default MostViews

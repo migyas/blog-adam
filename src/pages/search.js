@@ -38,9 +38,11 @@ const SearchPage = () => {
       {postList.map(
         ({
           node: {
-            frontmatter: { slug, title, description, category },
+            frontmatter: {title, description, category, image },
+            fields: { slug },
           },
         }) => (
+
           <Slide
             slug={slug}
             category={category}

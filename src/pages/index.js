@@ -10,11 +10,6 @@ import Featured from "../components/Featured"
 import MostViews from "../components/MostViews"
 import ViewsBlog from "../components/MostViewsBlog"
 
-// IMAGES ESTÁTICAS
-import imageheader from "../images/photo-post.png"
-import imagefeatured from "../../static/assets/img/featured.png"
-import imageviews from "../../static/assets/img/mostviews.png"
-
 const IndexPage = () => {
   const { allMarkdownRemark } = useStaticQuery(graphql`
     query Slide {
@@ -49,7 +44,7 @@ const IndexPage = () => {
       {slide.map(
         ({
           node: {
-            frontmatter: { category, date, description, title },
+            frontmatter: { category, date, description, title, image },
             fields: { slug },
           },
         }) => (
@@ -58,7 +53,7 @@ const IndexPage = () => {
             category={category}
             date={date}
             title={title}
-            image={imageheader}
+            image={image}
             description={description}
           />
         )
@@ -66,8 +61,8 @@ const IndexPage = () => {
       <Category />
 
       <Featured />
-      
-      <MostViews image={imageviews} category="RESOURCE" />
+
+      <MostViews />
 
       <ViewsBlog
         title="Mind-Blowing Twitter Stats and Facts on Our Favorite Network (2018)"

@@ -3,8 +3,8 @@ date: 2020-04-02 05:54:23
 title: First day in my home office
 description: And I'm not sure about the universe.
 category: React
-image: assets/img/card1.png
 tag: destaque
+image: "assets/img/featured.png"
 ---
 
 # Lorem ipsum

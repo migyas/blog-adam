@@ -17,6 +17,7 @@ const Featured = () => {
             frontmatter {
               category
               title
+              image
               description
               tag
             }
@@ -46,7 +47,7 @@ const Featured = () => {
         </S.FeaturedHeader>
 
         <S.FeaturedPosts>
-          <S.FeaturedBackground image={firstFeatured.frontmatter.image}>
+          <S.FeaturedBackground image={firstFeatured.frontmatter.image} to={firstFeatured.fields.slug}>
             <S.FeaturedInfo>
               BY &nbsp;&nbsp;&nbsp;ADAM DIAS
               &nbsp;&nbsp;&nbsp;IN&nbsp;&nbsp;&nbsp;{" "}

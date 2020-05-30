@@ -2,8 +2,9 @@
 date: 2020-05-21 09:22:55
 title: Treinando como colocar todos
 description: So say goodbye to love up high
-image: assets/img/card1.png
 category: HTML/CSS3
+tag: destaque
+image: "assets/img/photo-post.png"
 ---
 
 Proin suscipit luctus orci placerat fringilla. Donec hendrerit laoreet risus eget adipiscing. Suspendisse in urna ligula, a volutpat mauris. Sed enim mi, [bibendum](http://google.com) eu pulvinar vel, sodales vitae dui.

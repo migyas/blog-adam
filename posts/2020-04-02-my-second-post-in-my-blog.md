@@ -4,6 +4,7 @@ title: Second post in my blog
 description: So say goodbye to love up high
 category: CSS3
 tag: destaque
+image: "assets/img/featured.png"
 ---
 
 Proin suscipit luctus orci placerat fringilla. Donec hendrerit laoreet risus eget adipiscing. Suspendisse in urna ligula, a volutpat mauris. Sed enim mi, [bibendum](http://google.com) eu pulvinar vel, sodales vitae dui.

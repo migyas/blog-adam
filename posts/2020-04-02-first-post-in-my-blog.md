@@ -1,9 +1,10 @@
 ---
 date: 2020-04-10 05:50:23
 title: First post in my blog
-description: So say goodbye to love and hold your head up high
-tag: destaque
+description: So say goodbye to love and 
 category: CSS3
+tag: destaque
+image: "assets/img/featured.png"
 ---
 
 Proin suscipit luctus orci placerat fringilla. Donec hendrerit laoreet risus eget adipiscing. Suspendisse in urna ligula, a volutpat mauris. Sed enim mi, [bibendum](http://google.com) eu pulvinar vel, sodales vitae dui.
