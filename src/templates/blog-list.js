@@ -4,7 +4,6 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import PostItem from "../components/PostItem"
-// import Pagination from "../components/Pagination"
 
 import * as S from "../components/ListWrapper/styled"
 
@@ -44,7 +43,7 @@ export const query = graphql`
   query List {
     allMarkdownRemark(
       sort: { fields: frontmatter___date, order: DESC }
-      limit: 5
+      limit: 2
     ) {
       edges {
         node {

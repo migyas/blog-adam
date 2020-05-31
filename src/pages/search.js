@@ -6,8 +6,6 @@ import SEO from "../components/seo"
 
 import Slide from "../components/Slide"
 
-import imageheader from "../images/photo-post.png"
-
 const SearchPage = () => {
   const { allMarkdownRemark } = useStaticQuery(graphql`
     query PostList {
@@ -21,6 +19,7 @@ const SearchPage = () => {
               title
               description
               category
+              image
             }
             fields {
               slug
@@ -38,15 +37,14 @@ const SearchPage = () => {
       {postList.map(
         ({
           node: {
-            frontmatter: {title, description, category, image },
+            frontmatter: { title, description, category, image },
             fields: { slug },
           },
         }) => (
-
           <Slide
             slug={slug}
             category={category}
-            image={imageheader}
+            image={image}
             title={title}
             description={description}
           />
