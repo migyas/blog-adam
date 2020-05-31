@@ -1,9 +1,8 @@
 backend:
   name: git-gateway
-  repo: migyas/blog-adam
   branch: develop
   site-domain: https://blog-adam.netlify.app
-  
+
 publish_mode: editorial_workflow
 media_folder: "static/assets/img"
 public_folder: "assets/img"
