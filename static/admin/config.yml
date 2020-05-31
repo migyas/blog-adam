@@ -1,9 +1,9 @@
 backend:
-  name: github
+  name: git-gateway
   repo: migyas/blog-adam
-  branch: master
-  site-domain: http://localhost:8000
-
+  branch: develop
+  site-domain: https://blog-adam.netlify.app
+  
 publish_mode: editorial_workflow
 media_folder: "static/assets/img"
 public_folder: "assets/img"
