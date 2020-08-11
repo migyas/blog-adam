@@ -10,7 +10,7 @@ export const ViewsBlogWrapper = styled.section`
   ${media.lessThan("medium")`
     margin-bottom: 3.5rem;
   `}
-`
+` 
 
 export const ViewsBlogHeader = styled.header`
   margin-bottom: 2.6rem;
@@ -52,6 +52,8 @@ export const ViewsBlogItem = styled(Link)`
 
 export const ViewsBlogImg = styled.img`
   width: 50%;
+  height: 25rem;
+  border-radius: 0 5px 5px 0;
 
   ${media.lessThan("865px")`
     width: 35%;
